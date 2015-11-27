@@ -1,0 +1,164 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body, ul, li, div, span, main, header, footer, h1, textarea, input, button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+ul {
+  list-style: none;
+}
+
+#map {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+header {
+  height: 50px;
+  background: gray;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Righteous', sans-serif;
+}
+
+main {
+  background: #eee;
+}
+
+footer {
+  height: 50px;
+  background: gray;
+}
+
+.right {
+  box-sizing: border-box;
+  float: right;
+  width: 50%;
+  padding: 20px;
+}
+
+.emoji-list {
+  width: 400px;
+  margin: auto;
+}
+
+.emoji {
+  float: left;
+  margin: 5px;
+}
+
+.emoji li {
+  font-size: 50px;
+  position: relative;
+}
+
+.emoji .border {
+  opacity: 0;
+}
+
+.emoji li:hover {
+  cursor: pointer;
+}
+
+.emoji li span {
+  z-index: 1;
+position: relative;
+}
+
+.emoji li:hover > .border, .emoji li.selected > .border {
+  opacity: 1;
+  transition: opacity .5s;
+  height: 50px;
+  top: 6px;
+  left: 0;
+  z-index: 0;
+  width: 30px;
+  position: absolute;
+  border-radius: 80%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.emoji li:hover > .border {
+  background: rgba(100,100,100,.5);
+}
+
+.emoji li.selected > .border {
+  background: rgba(0,150,0,.5);
+}
+
+.places-list {
+  background: white;
+  max-height: 190px;
+  overflow: scroll;
+}
+
+.places-list li {
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.places-list li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+.place-form button, .place-form textarea, .place-form input {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.place-form textarea, .place-form input {
+  font-size: 16px;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.place-show {
+  margin-top: 20px;
+}

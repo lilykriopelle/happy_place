@@ -1,0 +1,31 @@
+<div id="content"></div>
+
+<script type="text/javascript">
+
+  window.Emoji = {
+    hearts: "<%= Emoji::Index.new.find_by_name('heart_eyes')["moji"] %>",
+    happy: "<%= Emoji::Index.new.find_by_name('smile')["moji"] %>",
+    blush: "<%= Emoji::Index.new.find_by_name('blush')["moji"] %>",
+    calm: "<%= Emoji::Index.new.find_by_name('relieved')["moji"] %>",
+    crying: "<%= Emoji::Index.new.find_by_name('loudly_crying_face')["moji"] %>",
+    smirk: "<%= Emoji::Index.new.find_by_name('smirk')["moji"] %>",
+    happy_cry: "<%= Emoji::Index.new.find_by_name('face_with_tear_of_joy')["moji"] %>",
+    grumpy: "<%= Emoji::Index.new.find_by_name('unamused')["moji"] %>",
+    dizzy: "<%= Emoji::Index.new.find_by_name('dizzy_face')["moji"] %>",
+    disappointed: "<%= Emoji::Index.new.find_by_name('disappointed_but_relieved_face')["moji"] %>",
+    tongue: "<%= Emoji::Index.new.find_by_name('stuck_out_tongue_closed_eyes')["moji"] %>",
+    flushed: "<%= Emoji::Index.new.find_by_name('flushed')["moji"] %>",
+  }
+
+  window.EmojiImages = {
+    question: "<%= image_path('question.png') %>",
+    hearts: "<%= image_path('hearts.png') %>",
+    happy: "<%= image_path('happy.jpg') %>",
+    crying: "<%= image_path('crying.png') %>",
+    blush: "<%= image_path('blushing.png') %>",
+    happy_cry: "<%= image_path('happy_cry.png') %>",
+    flushed: "<%= image_path('flushed.png') %>",
+    smirk: "<%= image_path('smirk.png') %>",
+    dizzy: "<%= image_path('dizzy.png') %>",
+  }
+</script>

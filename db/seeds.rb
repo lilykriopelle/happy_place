@@ -1,0 +1,11 @@
+jonathan = User.create!(username: "jonathan", password: "password")
+tommy = User.create!(username: "tommy", password: "password")
+conz = User.create!(username: "conz", password: "password")
+
+empire = jonathan.places.create!(location: 'empire state building', latitude: 40.7484 , longitude: -73.9857, user_id: 1, emoji: 'hearts')
+south_ferry = jonathan.places.create!(location: 'south ferry', latitude: 40.70122 , longitude: -74.013222, user_id: 1, emoji: 'happy_cry')
+west_village = jonathan.places.create!(location: 'west village', latitude: 40.7358 , longitude: -74.0036, user_id: 1, emoji: 'flushed')
+soho = tommy.places.create!(location: 'soho', latitude: 40.7231, longitude: -74.0008, user_id: 1, emoji: 'crying')
+another = tommy.places.create!(location: 'near soho', latitude: 40.7236, longitude: -74.0015, user_id: 1, emoji: 'blush')
+east_village = conz.places.create!(location: 'east village', latitude: 40.7275, longitude: -73.9858, user_id: 1, emoji: 'smirk')
+central_park = conz.places.create!(location: 'central park', latitude: 40.7833, longitude: -73.9667, user_id: 1, emoji: 'dizzy')
